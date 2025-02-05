@@ -389,25 +389,6 @@
 
     document.querySelector('#nama').value = nama;
   </script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("main-navbar");
-    
-    function toggleNavbar() {
-      if (window.scrollY < window.innerHeight * 0.5) {
-        navbar.style.display = "none";
-      } else {
-        navbar.style.display = "flex";
-      }
-    }
-
-    // Jalankan saat halaman dimuat
-    toggleNavbar();
-
-    // Jalankan saat pengguna scroll
-    window.addEventListener("scroll", toggleNavbar);
-  });
-</script>
 </body>
 
 </html>
