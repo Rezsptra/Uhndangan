@@ -47,7 +47,7 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Uhndangan</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dino</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -201,6 +201,7 @@
     </div>
   </section>
 
+
   <section id="gifts" class="gifts">
     <div class="container">
       <div class="row justify-content-center">
@@ -214,18 +215,18 @@
         <div class="col-md-6">
           <ul class="list-group">
             <li class="list-group-item">
-              <img src="img/logo bca.png" alt="Logo BCA" style="width: 50px; height: auto; display: block; margin: 0 auto 10px;">
+                <img src="img/logo bca.png" alt="Logo BCA" style="width: 50px; height: auto; display: block; margin: 0 auto 10px;">
               <div class="fw-bold">BCA</div>
               3450058831 - Yulia Siska
             </li>
             <li class="list-group-item">
-              <img src="img/logo bca.png" alt="Logo BCA" style="width: 50px; height: auto; display: block; margin: 0 auto 10px;">
+                <img src="img/logo bca.png" alt="Logo BCA" style="width: 50px; height: auto; display: block; margin: 0 auto 10px;">
               <div class="fw-bold">BCA</div>
               5660328116 - Pipin Aripin
             </li>
           </ul>
         </div>
-      </div>      
+      </div>
     </div>
   </section>
 
@@ -259,17 +260,7 @@
             <div class="col-md-2 align-self-end">
                 <button type="submit" class="btn btn-primary">Kirim</button>
             </div>
-            <h2>Leave a Comment</h2>
-            <input type="text" id="nameInput" class="input-box" placeholder="Enter your name...">
-            <textarea id="commentInput" class="comment-box" rows="3" placeholder="Write your comment here..."></textarea>
-            <button onclick="addComment()">Submit</button>
-            
-            <div class="comment-list" id="commentList">
-                <h3>Comments:</h3>
-            </div>
-        </div>
         </form>
-        </div>
     </div>
 </section>
   
@@ -307,51 +298,6 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 
-    <!-- Fitur Komentar -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          loadComments();
-      });
-
-      function addComment() {
-          let nameInput = document.getElementById('nameInput');
-          let commentInput = document.getElementById('commentInput');
-          let nameText = nameInput.value.trim();
-          let commentText = commentInput.value.trim();
-          
-          if (nameText === '' || commentText === '') {
-              alert('Please enter your name and comment before submitting!');
-              return;
-          }
-          
-          let commentList = document.getElementById('commentList');
-          let newComment = document.createElement('div');
-          newComment.classList.add('comment');
-          newComment.innerHTML = `<strong>${nameText} :</strong> ${commentText}`;
-          
-          commentList.appendChild(newComment);
-          saveComment(nameText, commentText);
-          nameInput.value = ''; // Clear the name input after adding
-          commentInput.value = ''; // Clear the comment input after adding
-      }
-
-      function saveComment(name, comment) {
-          let comments = JSON.parse(localStorage.getItem("comments")) || [];
-          comments.push({ name, comment });
-          localStorage.setItem("comments", JSON.stringify(comments));
-      }
-
-      function loadComments() {
-          let comments = JSON.parse(localStorage.getItem("comments")) || [];
-          let commentList = document.getElementById('commentList');
-          comments.forEach(comment => {
-              let newComment = document.createElement('div');
-              newComment.classList.add('comment');
-              newComment.innerHTML = `<strong>${comment.name} :</strong> ${comment.comment}`;
-              commentList.appendChild(newComment);
-          });
-      }
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
    <script>
