@@ -23,12 +23,15 @@ body {
   z-index: -1;
   filter: grayscale();
 }
-
 .hero {
-  position: relative;
-  min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 20px;
 }
-
 .hero h1,
 .hero h4,
 .hero p {
