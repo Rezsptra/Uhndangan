@@ -5,12 +5,68 @@
 }
 
 body {
-  font-size: 1.2rem;
-  font-family: 'Work Sans', sans-serif;
-  min-height: 4000px;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 
 /* Hero Section */
 .hero {
@@ -227,4 +283,10 @@ footer a {
   .timeline::before {
     left: 5%;
   }
+}
+  @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
 }
