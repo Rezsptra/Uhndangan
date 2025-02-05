@@ -394,14 +394,14 @@ footer li {
   }
 }
 
-/* Laptop */
+/* laptop */
 @media (max-width: 992px) {
   html {
     font-size: 75%;
   }
 
   .simply-countdown > .simply-section {
-    padding: 40px;
+    padding: 70px;
   }
 
   .home .heart {
@@ -412,46 +412,45 @@ footer li {
     left: 60px;
   }
 
-  .timeline li {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .timeline li .timeline-image {
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 20px 0;
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
   }
 
   .timeline li .timeline-panel {
-    width: 100%;
-    float: none;
-    text-align: center;
+    width: calc((100% - 200px));
+    float: right;
   }
 
-  .timeline li .timeline-panel::before,
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
   .timeline li .timeline-panel::after {
-    display: none;
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
   }
 }
 
-/* Tablet */
+/* tablet */
 @media (max-width: 768px) {
   html {
     font-size: 65%;
   }
 
-  .simply-countdown {
-    gap: 8px;
-  }
-
   .simply-countdown > .simply-section {
-    padding: 30px;
+    padding: 60px;
     margin: 5px;
   }
 
   .mynavbar .nav-link {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -460,46 +459,37 @@ footer li {
   }
 
   .timeline li .timeline-image {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 }
 
-/* Mobile phone */
+/* mobile phone */
 @media (max-width: 576px) {
   html {
     font-size: 60%;
   }
 
-  .simply-countdown {
-    gap: 5px;
-  }
-
   .simply-countdown > .simply-section {
-    padding: 20px;
+    padding: 45px;
     margin: 3px;
-  }
-
-  .timeline li {
-    flex-direction: column;
-    align-items: center;
   }
 
   .timeline li .timeline-image {
     width: 80px;
     height: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 15px 0;
   }
 
   .timeline li .timeline-panel {
-    width: 90%;
-    text-align: center;
+    width: 65%;
+    transform: translateX(-20px);
   }
 
-  .timeline li .timeline-panel::before,
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
   .timeline li .timeline-panel::after {
-    display: none;
+    top: 31px;
   }
 }
